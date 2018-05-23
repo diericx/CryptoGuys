@@ -1,6 +1,10 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
+import GuyCard from "../guyCard/GuyCard";
+
+import styles from "./styles.css";
+
 class GetTokens extends Component {
   constructor(props, context) {
     super(props);
@@ -19,10 +23,16 @@ class GetTokens extends Component {
     }
 
     // If the data is here, get it and display it
-    var data = this.props.TutorialToken.balanceOf[this.dataKey].value
-    console.log(data)
+    // var data = this.props.TutorialToken.balanceOf[this.dataKey].value
+    // Test Data
+    var data = [{dna: "12341234"}, {dna: "581740328"}]
+
     return (
-      <div> {data} </div>
+      <div className={styles.container}>
+      {data.map(guy => {
+        return <GuyCard data={guy} key={guy.dna} />
+      })}
+      </div>
     )
   }
 }

@@ -1,0 +1,9 @@
+:local(.container) {
+  width: 10em;
+  height: 15em;
+  margin: 10px;
+  border-radius: 1em;
+  padding: 5px;
+  text-align: center;
+  background-color: lightgreen;
+}
