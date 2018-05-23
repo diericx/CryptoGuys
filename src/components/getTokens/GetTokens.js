@@ -9,9 +9,6 @@ class GetTokens extends Component {
   constructor(props, context) {
     super(props);
     this.contracts = context.drizzle.contracts
-    
-    console.log(context);
-    console.log("Initial tut token: ", this.props.TutorialToken)
     this.dataKey = this.contracts.TutorialToken.methods.balanceOf.cacheCall(this.props.account)
   }
   render() {
