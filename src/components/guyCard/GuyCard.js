@@ -5,7 +5,9 @@ export default class GuyCard extends Component {
   render() {
     let {dna} = this.props.data
     return (
-      <div className={styles.container}> {dna} </div>
+      <div className={styles.container}>
+        {dna} 
+      </div>
     )
   }
 }

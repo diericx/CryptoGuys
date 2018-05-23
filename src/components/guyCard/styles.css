@@ -2,7 +2,21 @@
   width: 10em;
   height: 15em;
   margin: 10px;
+
+  /* Border */
+  /* border-style: solid;
+  border-image-source: url("../../../public/assets/border.png");
+  border-image-slice: 20;
+  border-image-width: 10;
+  border-image-repeat: round; */
+
+  /* Background */
+  /* background-image: url("../../../public/assets/background.png"); */
+
   border-radius: 1em;
+  background-color: lightgreen;
+
+  /* border-image-outset: 1; */
   padding: 5px;
   text-align: center;
   background-color: lightgreen;
