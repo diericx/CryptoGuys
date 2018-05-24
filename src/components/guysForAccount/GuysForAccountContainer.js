@@ -1,15 +1,13 @@
-import Home from './Home'
+import GuysForAccount from './GuysForAccount'
 import { drizzleConnect } from 'drizzle-react'
 
 // May still need this even with data function to refresh component on updates for this contract.
 const mapStateToProps = state => {
   return {
-    accounts: state.accounts,
     GuyFactory: state.contracts.GuyFactory,
-    drizzleStatus: state.drizzleStatus
   }
 }
 
-const HomeContainer = drizzleConnect(Home, mapStateToProps);
+const GuysForAccountContainer = drizzleConnect(GuysForAccount, mapStateToProps);
 
-export default HomeContainer
+export default GuysForAccountContainer
