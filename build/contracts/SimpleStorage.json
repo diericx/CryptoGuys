@@ -42,14 +42,14 @@
       "type": "function"
     }
   ],
-  "bytecode": "0x608060405234801561001057600080fd5b50610122806100206000396000f30060806040526004361060485763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416632a1afcd98114604d57806360fe47b1146071575b600080fd5b348015605857600080fd5b50605f6088565b60408051918252519081900360200190f35b348015607c57600080fd5b506086600435608e565b005b60005481565b60008190556040805160208082526019908201527f446174612073746f726564207375636365737366756c6c7921000000000000008183015290517f60cdc157ca4737a5d39a0e107532616e7bf6946e615228812c7f9bc9f81797a69181900360600190a1505600a165627a7a7230582046aa4edcf4ca3bdda9bb695205ed0cc22f2e362b3f0b4ea566d55d7428fad8840029",
-  "deployedBytecode": "0x60806040526004361060485763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416632a1afcd98114604d57806360fe47b1146071575b600080fd5b348015605857600080fd5b50605f6088565b60408051918252519081900360200190f35b348015607c57600080fd5b506086600435608e565b005b60005481565b60008190556040805160208082526019908201527f446174612073746f726564207375636365737366756c6c7921000000000000008183015290517f60cdc157ca4737a5d39a0e107532616e7bf6946e615228812c7f9bc9f81797a69181900360600190a1505600a165627a7a7230582046aa4edcf4ca3bdda9bb695205ed0cc22f2e362b3f0b4ea566d55d7428fad8840029",
-  "sourceMap": "26:206:2:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;26:206:2;;;;;;;",
-  "deployedSourceMap": "26:206:2:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;99:22;;8:9:-1;5:2;;;30:1;27;20:12;5:2;99:22:2;;;;;;;;;;;;;;;;;;;;126:104;;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;126:104:2;;;;;;;99:22;;;;:::o;126:104::-;160:10;:14;;;186:39;;;;;;;;;;;;;;;;;;;;;;;;;;;;126:104;:::o",
-  "source": "pragma solidity ^0.4.18;\n\ncontract SimpleStorage {\n  event StorageSet(\n    string _message\n  );\n\n  uint public storedData;\n\n  function set(uint x) public {\n    storedData = x;\n\n    emit StorageSet(\"Data stored successfully!\");\n  }\n}\n",
-  "sourcePath": "/Users/Zac/Documents/Code/GitHub/Web/cryptoguys-drizzle/contracts/SimpleStorage.sol",
+  "bytecode": "0x608060405234801561001057600080fd5b50610122806100206000396000f30060806040526004361060485763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416632a1afcd98114604d57806360fe47b1146071575b600080fd5b348015605857600080fd5b50605f6088565b60408051918252519081900360200190f35b348015607c57600080fd5b506086600435608e565b005b60005481565b60008190556040805160208082526019908201527f446174612073746f726564207375636365737366756c6c7921000000000000008183015290517f60cdc157ca4737a5d39a0e107532616e7bf6946e615228812c7f9bc9f81797a69181900360600190a1505600a165627a7a72305820e482acc6a7bb9175351194266183fa6b969c2f1deb0f7bc23ecf86d56268e1990029",
+  "deployedBytecode": "0x60806040526004361060485763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416632a1afcd98114604d57806360fe47b1146071575b600080fd5b348015605857600080fd5b50605f6088565b60408051918252519081900360200190f35b348015607c57600080fd5b506086600435608e565b005b60005481565b60008190556040805160208082526019908201527f446174612073746f726564207375636365737366756c6c7921000000000000008183015290517f60cdc157ca4737a5d39a0e107532616e7bf6946e615228812c7f9bc9f81797a69181900360600190a1505600a165627a7a72305820e482acc6a7bb9175351194266183fa6b969c2f1deb0f7bc23ecf86d56268e1990029",
+  "sourceMap": "28:218:2:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;28:218:2;;;;;;;",
+  "deployedSourceMap": "28:218:2:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;106:22;;8:9:-1;5:2;;;30:1;27;20:12;5:2;106:22:2;;;;;;;;;;;;;;;;;;;;135:108;;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;135:108:2;;;;;;;106:22;;;;:::o;135:108::-;170:10;:14;;;198:39;;;;;;;;;;;;;;;;;;;;;;;;;;;;135:108;:::o",
+  "source": "pragma solidity ^0.4.18;\r\n\r\ncontract SimpleStorage {\r\n  event StorageSet(\r\n    string _message\r\n  );\r\n\r\n  uint public storedData;\r\n\r\n  function set(uint x) public {\r\n    storedData = x;\r\n\r\n    emit StorageSet(\"Data stored successfully!\");\r\n  }\r\n}\r\n",
+  "sourcePath": "C:\\Users\\Kieran O'Day\\Documents\\GitHub\\CryptoGuys\\contracts\\SimpleStorage.sol",
   "ast": {
-    "absolutePath": "/Users/Zac/Documents/Code/GitHub/Web/cryptoguys-drizzle/contracts/SimpleStorage.sol",
+    "absolutePath": "/C/Users/Kieran O'Day/Documents/GitHub/CryptoGuys/contracts/SimpleStorage.sol",
     "exportedSymbols": {
       "SimpleStorage": [
         216
@@ -99,7 +99,7 @@
                   "name": "_message",
                   "nodeType": "VariableDeclaration",
                   "scope": 199,
-                  "src": "75:15:2",
+                  "src": "79:15:2",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -110,7 +110,7 @@
                     "id": 196,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
-                    "src": "75:6:2",
+                    "src": "79:6:2",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage_ptr",
                       "typeString": "string"
@@ -120,9 +120,9 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "69:25:2"
+              "src": "72:27:2"
             },
-            "src": "53:42:2"
+            "src": "56:44:2"
           },
           {
             "constant": false,
@@ -130,7 +130,7 @@
             "name": "storedData",
             "nodeType": "VariableDeclaration",
             "scope": 216,
-            "src": "99:22:2",
+            "src": "106:22:2",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -141,7 +141,7 @@
               "id": 200,
               "name": "uint",
               "nodeType": "ElementaryTypeName",
-              "src": "99:4:2",
+              "src": "106:4:2",
               "typeDescriptions": {
                 "typeIdentifier": "t_uint256",
                 "typeString": "uint256"
@@ -154,7 +154,7 @@
             "body": {
               "id": 214,
               "nodeType": "Block",
-              "src": "154:76:2",
+              "src": "163:80:2",
               "statements": [
                 {
                   "expression": {
@@ -171,7 +171,7 @@
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 201,
-                      "src": "160:10:2",
+                      "src": "170:10:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
@@ -186,13 +186,13 @@
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 203,
-                      "src": "173:1:2",
+                      "src": "183:1:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
                       }
                     },
-                    "src": "160:14:2",
+                    "src": "170:14:2",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -200,7 +200,7 @@
                   },
                   "id": 209,
                   "nodeType": "ExpressionStatement",
-                  "src": "160:14:2"
+                  "src": "170:14:2"
                 },
                 {
                   "eventCall": {
@@ -216,7 +216,7 @@
                         "kind": "string",
                         "lValueRequested": false,
                         "nodeType": "Literal",
-                        "src": "197:27:2",
+                        "src": "209:27:2",
                         "subdenomination": null,
                         "typeDescriptions": {
                           "typeIdentifier": "t_stringliteral_e3f80da8c3742cb225df557f335969ea1a3da0020617c534164a2e7912c74501",
@@ -237,7 +237,7 @@
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 199,
-                      "src": "186:10:2",
+                      "src": "198:10:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (string memory)"
@@ -251,7 +251,7 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "186:39:2",
+                    "src": "198:39:2",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
@@ -259,7 +259,7 @@
                   },
                   "id": 213,
                   "nodeType": "EmitStatement",
-                  "src": "181:44:2"
+                  "src": "193:44:2"
                 }
               ]
             },
@@ -281,7 +281,7 @@
                   "name": "x",
                   "nodeType": "VariableDeclaration",
                   "scope": 215,
-                  "src": "139:6:2",
+                  "src": "148:6:2",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -292,7 +292,7 @@
                     "id": 202,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
-                    "src": "139:4:2",
+                    "src": "148:4:2",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -302,30 +302,30 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "138:8:2"
+              "src": "147:8:2"
             },
             "payable": false,
             "returnParameters": {
               "id": 205,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "154:0:2"
+              "src": "163:0:2"
             },
             "scope": 216,
-            "src": "126:104:2",
+            "src": "135:108:2",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
         "scope": 217,
-        "src": "26:206:2"
+        "src": "28:218:2"
       }
     ],
-    "src": "0:233:2"
+    "src": "0:248:2"
   },
   "legacyAST": {
-    "absolutePath": "/Users/Zac/Documents/Code/GitHub/Web/cryptoguys-drizzle/contracts/SimpleStorage.sol",
+    "absolutePath": "/C/Users/Kieran O'Day/Documents/GitHub/CryptoGuys/contracts/SimpleStorage.sol",
     "exportedSymbols": {
       "SimpleStorage": [
         216
@@ -375,7 +375,7 @@
                   "name": "_message",
                   "nodeType": "VariableDeclaration",
                   "scope": 199,
-                  "src": "75:15:2",
+                  "src": "79:15:2",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -386,7 +386,7 @@
                     "id": 196,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
-                    "src": "75:6:2",
+                    "src": "79:6:2",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage_ptr",
                       "typeString": "string"
@@ -396,9 +396,9 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "69:25:2"
+              "src": "72:27:2"
             },
-            "src": "53:42:2"
+            "src": "56:44:2"
           },
           {
             "constant": false,
@@ -406,7 +406,7 @@
             "name": "storedData",
             "nodeType": "VariableDeclaration",
             "scope": 216,
-            "src": "99:22:2",
+            "src": "106:22:2",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -417,7 +417,7 @@
               "id": 200,
               "name": "uint",
               "nodeType": "ElementaryTypeName",
-              "src": "99:4:2",
+              "src": "106:4:2",
               "typeDescriptions": {
                 "typeIdentifier": "t_uint256",
                 "typeString": "uint256"
@@ -430,7 +430,7 @@
             "body": {
               "id": 214,
               "nodeType": "Block",
-              "src": "154:76:2",
+              "src": "163:80:2",
               "statements": [
                 {
                   "expression": {
@@ -447,7 +447,7 @@
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 201,
-                      "src": "160:10:2",
+                      "src": "170:10:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
@@ -462,13 +462,13 @@
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 203,
-                      "src": "173:1:2",
+                      "src": "183:1:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
                       }
                     },
-                    "src": "160:14:2",
+                    "src": "170:14:2",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -476,7 +476,7 @@
                   },
                   "id": 209,
                   "nodeType": "ExpressionStatement",
-                  "src": "160:14:2"
+                  "src": "170:14:2"
                 },
                 {
                   "eventCall": {
@@ -492,7 +492,7 @@
                         "kind": "string",
                         "lValueRequested": false,
                         "nodeType": "Literal",
-                        "src": "197:27:2",
+                        "src": "209:27:2",
                         "subdenomination": null,
                         "typeDescriptions": {
                           "typeIdentifier": "t_stringliteral_e3f80da8c3742cb225df557f335969ea1a3da0020617c534164a2e7912c74501",
@@ -513,7 +513,7 @@
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 199,
-                      "src": "186:10:2",
+                      "src": "198:10:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (string memory)"
@@ -527,7 +527,7 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "186:39:2",
+                    "src": "198:39:2",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
@@ -535,7 +535,7 @@
                   },
                   "id": 213,
                   "nodeType": "EmitStatement",
-                  "src": "181:44:2"
+                  "src": "193:44:2"
                 }
               ]
             },
@@ -557,7 +557,7 @@
                   "name": "x",
                   "nodeType": "VariableDeclaration",
                   "scope": 215,
-                  "src": "139:6:2",
+                  "src": "148:6:2",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -568,7 +568,7 @@
                     "id": 202,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
-                    "src": "139:4:2",
+                    "src": "148:4:2",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -578,27 +578,27 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "138:8:2"
+              "src": "147:8:2"
             },
             "payable": false,
             "returnParameters": {
               "id": 205,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "154:0:2"
+              "src": "163:0:2"
             },
             "scope": 216,
-            "src": "126:104:2",
+            "src": "135:108:2",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
         "scope": 217,
-        "src": "26:206:2"
+        "src": "28:218:2"
       }
     ],
-    "src": "0:233:2"
+    "src": "0:248:2"
   },
   "compiler": {
     "name": "solc",
@@ -608,8 +608,8 @@
     "5777": {
       "events": {},
       "links": {},
-      "address": "0x58cc0becb72d69e73f5ba21b99928e785ba580f5",
-      "transactionHash": "0x1315e1d3015fdffb490d9132318404642213468bfb3627f1459d0eeef2c33fd5"
+      "address": "0x1aedef6dea8f81aa7a530889ec1c4828cde7ec99",
+      "transactionHash": "0xa40d8a511c203bd524130ccbc0947e111a7c39781a9d6cb4c256fa5c73f70944"
     },
     "1527035773762": {
       "events": {},
@@ -619,5 +619,5 @@
     }
   },
   "schemaVersion": "2.0.0",
-  "updatedAt": "2018-05-23T00:36:35.685Z"
+  "updatedAt": "2018-05-23T20:02:52.034Z"
 }
