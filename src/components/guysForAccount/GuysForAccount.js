@@ -12,9 +12,11 @@ class GuysForAccount extends Component {
       guyDataKeys: []
     }
     this.contracts = context.drizzle.contracts
+    console.log(this.props)
 
     // Get the guys for this account
     this.contracts.GuyFactory.methods.guysFor(this.props.account).call().then((data) => {
+      console.log(data);
       // Cache call each guy for it's data and save the data key
       var guyDataKeys = data.map(guyId => {
         return this.contracts.GuyFactory.methods.getGuy.cacheCall(guyId)
@@ -37,17 +39,18 @@ class GuysForAccount extends Component {
       )
     }
 
-
+    let key = 0;
     return (
       <div className={styles.container}>
       {guyDataKeys.map(guyDataKey => {
+        key ++;
         if(!(guyDataKey in this.props.GuyFactory.getGuy)) {
           return (
             <span>Loading...</span>
           )
         }
         let guy = this.props.GuyFactory.getGuy[guyDataKey].value
-        return <GuyCard data={guy} key={guy.dna} />
+        return <GuyCard data={guy} key={key} />
       })}
       </div>
     )

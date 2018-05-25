@@ -4,46 +4,61 @@ import "openzeppelin-solidity/contracts/ownership/Ownable.sol";
 import "openzeppelin-solidity/contracts/Math/SafeMath.sol";
 
 contract GuyFactory is Ownable{
-
+    // Imports
     using SafeMath for uint256;
-    
+    // Events
     event NewGuy(uint guyId, string name, uint dna);
     
-    uint dnaDigits = 16;
-    uint dnaModulus = 10 ** dnaDigits;
-    uint coolDownTime = 60 minutes;
-    
+    // Structs
     struct Guy {
         string name;
         uint dna;
         uint32 level;
-        uint32 readyTime;
         uint32 wins;
         uint32 losses;
     }
-    
+
+    // -- Storage --
+    // Consts
+    uint DNA_DIGITS = 16;
+    uint DNA_MODULUS = 10 ** DNA_DIGITS;
+    uint COOLDOWN_TIME = 60 minutes;
+    // Total guys array
     Guy[] public guys;
-    
-    mapping (uint => address) public guyToOwner;
-    mapping (address => uint) ownerGuyCount;
+    // Maps
+    mapping (uint256 => address) public guyIndexToOwner;
+    mapping (address => uint256) ownershipCount;
     
     //@dev function for creating a new "guy"
-    function createGuy(string _name, uint _dna) internal{
-        uint id = guys.push(Guy(_name, _dna, 1, uint32(now + coolDownTime), 0, 0)) - 1;
-        guyToOwner[id] = msg.sender;
-        ownerGuyCount[msg.sender]++;
-        NewGuy(id, _name, _dna);
+    function createGuy(string _name, uint _dna, address owner) internal returns(uint256) {
+        Guy memory _guy = Guy({
+            name: _name,
+            dna: _dna,
+            level: 1,
+            wins: 0,
+            losses: 0
+        });
+
+        uint256 newGuyId = guys.push(_guy) - 1;
+        guyIndexToOwner[newGuyId] = owner;
+        ownershipCount[owner]++;
+
+        return newGuyId;
+        // emit NewGuy(id, _name, _dna);
     }
 
+    //@dev returns the total supply
     function totalSupply() public view returns (uint) {
-        return guys.length - 1;
+        return guys.length;
     }
 
-    function balanceOf(address _owner) public view returns (uint256 count) {
-        return ownerGuyCount[_owner];
+    //@dev returns balance for a specific account
+    function balanceOf(address _owner) public view returns (uint256) {
+        return ownershipCount[_owner];
     }
 
-    function guysFor(address _owner) external view returns (uint[] ids) {
+    //@dev returns the tokens for an account
+    function guysFor(address _owner) external view returns (uint256[] ids) {
         uint256 guyCount = balanceOf(_owner);
 
         if (guyCount == 0) {
@@ -56,7 +71,7 @@ contract GuyFactory is Ownable{
         uint256 resultIndex = 0;
         uint256 guyId;
         for (guyId = 1; guyId <= totalGuys; guyId++) {
-            if (guyToOwner[guyId] == _owner) {
+            if (guyIndexToOwner[guyId] == _owner) {
                 result[resultIndex] = guyId;
                 resultIndex++;
             }
@@ -65,24 +80,22 @@ contract GuyFactory is Ownable{
         return result;
     }
 
-    function getGuy(uint _id) public view returns (string name, uint dna) {
+    //@dev returns the data for a specific token
+    function getGuy(uint256 _id) public view returns (string name, uint dna) {
         return (guys[_id].name, guys[_id].dna);
-    }
-
-    function getGuyCount() public returns(uint count) {
-        return guys.length;
     }
 
     function generateRandomDna(string _str) private view returns (uint) {
         uint rand = uint(keccak256(_str));
-        return rand % dnaModulus;
+        return rand % DNA_MODULUS;
     }
 
-    function createRandomGuy(string _name) public {
-        require(ownerGuyCount[msg.sender] <= 2);
+    function createRandomGuy(string _name, address _owner) public returns(uint256) {
+        // require(ownershipCount[_owner] <= 2);
         uint randDna = generateRandomDna(_name);
         randDna = randDna - randDna % 100;
-        createGuy(_name, randDna);
+        uint256 id = createGuy(_name, randDna, _owner);
+        return id;
     }
  
 }
