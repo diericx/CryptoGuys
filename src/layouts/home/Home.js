@@ -1,6 +1,11 @@
 import React, { Component } from 'react'
 import { AccountData, ContractForm, ContractData } from 'drizzle-react-components'
-import GetTokensContainer from "../../components/getTokens/GetTokensContainer";
+
+// Components
+import GuysForAccount from "../../components/guysForAccount/GuysForAccountContainer";
+import CreateGuy from "../../components/createGuy";
+
+// Assets
 import logo from '../../logo.png'
 
 class Home extends Component {
@@ -34,7 +39,14 @@ class Home extends Component {
 
           <div className="pure-u-1-1">
             <h2>Your Guys</h2>
-            <GetTokensContainer account={this.props.accounts[0]} />
+            <GuysForAccount account={this.props.accounts[0]} />
+            {/* <TokenCard contract="TutorialToken" method="balanceOf" methodArgs={[this.props.accounts[0]]}/> */}
+            {/* {this.props.drizzleStatus.initialized ? this.props.SimpleStorage.storedData.data() : 'Loading...'} */}
+          </div>
+
+          <div className="pure-u-1-1">
+            <h2>New Guy</h2>
+            <CreateGuy />
             {/* <TokenCard contract="TutorialToken" method="balanceOf" methodArgs={[this.props.accounts[0]]}/> */}
             {/* {this.props.drizzleStatus.initialized ? this.props.SimpleStorage.storedData.data() : 'Loading...'} */}
           </div>

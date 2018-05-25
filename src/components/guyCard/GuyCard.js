@@ -3,10 +3,11 @@ import styles from "./styles.css"
 
 export default class GuyCard extends Component {
   render() {
-    let {dna} = this.props.data
+    let {dna, name} = this.props.data
     return (
       <div className={styles.container}>
-        {dna} 
+        {dna} {"\n"} 
+        {name}
       </div>
     )
   }

@@ -1,13 +1,13 @@
-import GetTokens from './GetTokens'
+import CreateGuy from './CreateGuy'
 import { drizzleConnect } from 'drizzle-react'
 
 // May still need this even with data function to refresh component on updates for this contract.
 const mapStateToProps = state => {
   return {
-    TutorialToken: state.contracts.TutorialToken,
+    accounts: state.accounts,
   }
 }
 
-const GetTokensContainer = drizzleConnect(GetTokens, mapStateToProps);
+const CreateGuyContainer = drizzleConnect(CreateGuy, mapStateToProps);
 
-export default GetTokensContainer
+export default CreateGuyContainer
