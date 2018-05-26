@@ -52,11 +52,6 @@ contract GuyFactory is Ownable{
         return guys.length;
     }
 
-    //@dev returns balance for a specific account
-    function balanceOf(address _owner) public view returns (uint256) {
-        return ownershipCount[_owner];
-    }
-
     //@dev returns the tokens for an account
     function guysFor(address _owner) external view returns (uint256[] ids) {
         uint256 guyCount = balanceOf(_owner);
